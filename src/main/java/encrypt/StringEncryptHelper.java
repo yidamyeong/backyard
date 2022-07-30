@@ -60,8 +60,8 @@ public class StringEncryptHelper {
                 System.out.println("\n::: CLOSED");
                 return -1;
             default:
-                result = "::: INVALID INPUT";
-                break;
+                System.out.println("::: INVALID INPUT");
+                return 1;
         }
 
         System.out.println(line);
