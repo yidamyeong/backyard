@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class StringEncryptHelper {
 
-    public StandardPBEStringEncryptor encryptor;
-    public String line = "----------------------------------";
+    private final StandardPBEStringEncryptor encryptor;
+    private final String line = "----------------------------------";
 
     public StringEncryptHelper(String password) {
         encryptor = new StandardPBEStringEncryptor();
@@ -40,7 +40,7 @@ public class StringEncryptHelper {
         in.close();
     }
 
-    public int showResult(Scanner in, String choice) {
+    private int showResult(Scanner in, String choice) {
         String message;
         String result;
 
@@ -69,7 +69,7 @@ public class StringEncryptHelper {
         return 1;
     }
 
-    public String decrypt(String message) {
+    private String decrypt(String message) {
         if (message.startsWith("ENC(") && message.endsWith(")")) {
             message = message.substring(4, message.length() - 1);
         }
@@ -84,13 +84,13 @@ public class StringEncryptHelper {
         return decrypted;
     }
 
-    public String getMessage(Scanner in, String type) {
+    private String getMessage(Scanner in, String type) {
         System.out.println(line);
         System.out.printf("MESSAGE YOU WANT TO %s >> ", type);
         return in.nextLine();
     }
 
-    public String selectNumber(Scanner in) {
+    private String selectNumber(Scanner in) {
         System.out.println(line);
         System.out.println("1. ENCRYPT");
         System.out.println("2. DECRYPT");
