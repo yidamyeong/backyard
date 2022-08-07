@@ -7,4 +7,6 @@
         <constructor-arg value="hello" />
     </bean>
 
+    <bean id="lampFactory" class="designpatterns.factory_abstract.example.LampFactory" />
+
 </beans>
