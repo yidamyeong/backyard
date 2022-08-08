@@ -17,6 +17,8 @@ public class FactoryBeanExample {
         Lamp lampBean = applicationContext1.getBean(Lamp.class);
         System.out.println(lampFactoryBean);
         System.out.println(lampBean);
+
+        System.out.println(applicationContext1.getBean("lampFactoryJava", Lamp.class));
     }
 
 }

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class FactoryBeanConfig {
 
     @Bean
-    public LampFactory lampFactory() {
+    public LampFactory lampFactoryJava() {
         return new LampFactory();
     }
 
