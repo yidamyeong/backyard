@@ -92,4 +92,5 @@ public class TourPlan {
     public void addPlan(int day, String plan) {
         this.plans.add(new DetailPlan(day, plan));
     }
+
 }
